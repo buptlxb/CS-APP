@@ -12,9 +12,17 @@ On a Unix system, the translation from source file to object file is performed b
 
 ```unix> gcc -o object_file source_file.c```
 
-The translation is performed in the sequence of four phases shown in figure below. The programs that perform the four phases(preprocessor, compiler, assembler, and linker) are known collectively as the compilation system.
+The translation is performed in the sequence of four phases shown in the figure below. The programs that perform the four phases(preprocessor, compiler, assembler, and linker) are known collectively as the compilation system.
 
 ![The compilation system](images/the_compilation_system.png)
+
+* **Preprocessor phase** . The preprocessor (cpp) modifies the original C program according to the directives that begin with the `#` character. The result is another C program, typically with the `.i` suffix.
+
+* **Compilation phase** . The compiler (cc1) translate the text file(`.i`) into the text file(`.s`), which contains the assembly-language program.
+
+* **Assembly phase** . Next, the assembler (as) translates file(`.s`) into machine-language instructions, packages them in a form known as a *relocatable object program*, and stores the result in the object file(`.o`)
+
+* **Linking phase** .
 
 ## It pays to Understand How Compilation Systems Work
 
