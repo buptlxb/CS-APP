@@ -12,6 +12,9 @@ On a Unix system, the translation from source file to object file is performed b
 
 ```unix> gcc -o object_file source_file.c```
 
+The translation is performed in the sequence of four phases shown in figure below. The programs that perform the four phases(preprocessor, compiler, assembler, and linker) are known collectively as the compilation system.
+
+![The compilation system](images/the_compilation_system.png)
 
 ## It pays to Understand How Compilation Systems Work
 
